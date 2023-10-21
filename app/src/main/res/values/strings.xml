@@ -4,4 +4,7 @@
     <string name="user_field">Username</string>
     <string name="password_field">Password</string>
     <string name="login_button">Login</string>
+    <string name="menu_message">Menu Activity</string>
+    <string name="add_applicant">Add Applicant</string>
+    <string name="view_applicant">View Applicant</string>
 </resources>
