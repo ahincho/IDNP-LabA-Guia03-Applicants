@@ -1,11 +1,16 @@
 package com.unsa.applicants;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.unsa.applicants.domain.Applicant;
 import com.unsa.applicants.service.ApplicantService;
@@ -34,6 +39,33 @@ public class MenuActivity extends AppCompatActivity {
             intentView.putExtra("applicantService", this.applicantService);
             startActivity(intentView);
         });
+        // Using Intent and RegisterForActivityResult to Launch Add Applicant Activity
+        Button addButton = findViewById(R.id.addButton);
+        addButton.setOnClickListener(v -> {
+            Log.d("Menu Activity", "Go to Add Applicant Activity");
+            addLauncher.launch(new Intent(getApplicationContext(), AddApplicantActivity.class));
+        });
     }
+
+    ActivityResultLauncher<Intent> addLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == RESULT_OK) {
+                        Bundle extras = null;
+                        if (result.getData() != null) {
+                            extras = result.getData().getExtras();
+                        }
+                        Applicant applicant = null;
+                        if (extras != null) {
+                            applicant = (Applicant) extras.get("applicant");
+                        }
+                        applicantService.saveApplicant(applicant);
+                        Toast.makeText(getBaseContext(), "Applicant was recorded on database!", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getBaseContext(), "Something went wrong ...", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
 
 }

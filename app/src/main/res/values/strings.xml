@@ -16,4 +16,6 @@
     <string name="applicant_school">School</string>
     <string name="applicant_career">Career</string>
     <string name="holding_output">ABC</string>
+    <string name="add_message">Add Activity</string>
+    <string name="add_button">Add Applicant</string>
 </resources>
