@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ApplicantsCrud</string>
+    <string name="login_message">Login Activity</string>
+    <string name="user_field">Username</string>
+    <string name="password_field">Password</string>
+    <string name="login_button">Login</string>
+</resources>
