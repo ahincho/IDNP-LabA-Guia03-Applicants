@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +25,8 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d("Login Activity", "Login was successful!");
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
+            } else {
+                Toast.makeText(getBaseContext(), "Wrong credentials. Try again.", Toast.LENGTH_LONG).show();
             }
         });
     }
