@@ -1,6 +1,8 @@
 package com.unsa.applicants.domain;
 
-public class Applicant {
+import java.io.Serializable;
+
+public class Applicant implements Serializable {
 
     private String document;
     private String name;
@@ -8,6 +10,15 @@ public class Applicant {
     private String birthday;
     private String school;
     private String career;
+
+    public Applicant(String document, String name, String lastname, String birthday, String school, String career) {
+        this.document = document;
+        this.name = name;
+        this.lastname = lastname;
+        this.birthday = birthday;
+        this.school = school;
+        this.career = career;
+    }
 
     public String getDocument() {
         return document;

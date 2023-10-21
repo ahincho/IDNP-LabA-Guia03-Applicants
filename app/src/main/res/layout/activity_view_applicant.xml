@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewApplicantActivity">
+
+    <TextView
+        android:id="@+id/viewView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/view_message"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/documentInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/documentView"
+        app:layout_constraintEnd_toStartOf="@+id/searchButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewView" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="@string/view_search_button"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/documentOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/documentInput"
+        app:layout_constraintTop_toBottomOf="@+id/viewView" />
+
+    <TextView
+        android:id="@+id/documentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/applicant_document"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nameView"
+        app:layout_constraintEnd_toStartOf="@+id/documentOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/documentInput" />
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/applicant_name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lastnameView"
+        app:layout_constraintEnd_toStartOf="@+id/nameOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/documentView" />
+
+    <TextView
+        android:id="@+id/lastnameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/applicant_lastname"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/birthdayView"
+        app:layout_constraintEnd_toStartOf="@+id/lastnameOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+    <TextView
+        android:id="@+id/birthdayView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/schoolView"
+        app:layout_constraintEnd_toStartOf="@+id/birthdayOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameView" />
+
+    <TextView
+        android:id="@+id/schoolView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/school"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/careerView"
+        app:layout_constraintEnd_toStartOf="@+id/schoolOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthdayView" />
+
+    <TextView
+        android:id="@+id/careerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="239dp"
+        android:text="@string/career"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/careerOutput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schoolView" />
+
+    <TextView
+        android:id="@+id/documentOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/holding_output"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nameOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/documentView"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/nameOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/holding_output"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lastnameOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toEndOf="@+id/nameView"
+        app:layout_constraintTop_toBottomOf="@+id/documentOutput" />
+
+    <TextView
+        android:id="@+id/lastnameOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/holding_output"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/birthdayOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lastnameView"
+        app:layout_constraintTop_toBottomOf="@+id/nameOutput" />
+
+    <TextView
+        android:id="@+id/birthdayOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/holding_output"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/schoolOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/birthdayView"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameOutput" />
+
+    <TextView
+        android:id="@+id/schoolOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/holding_output"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/careerOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/schoolView"
+        app:layout_constraintTop_toBottomOf="@+id/birthdayOutput" />
+
+    <TextView
+        android:id="@+id/careerOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:text="@string/holding_output"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/careerView"
+        app:layout_constraintTop_toBottomOf="@+id/schoolOutput" />
+</androidx.constraintlayout.widget.ConstraintLayout>

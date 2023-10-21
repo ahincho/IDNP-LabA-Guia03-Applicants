@@ -7,4 +7,13 @@
     <string name="menu_message">Menu Activity</string>
     <string name="add_applicant">Add Applicant</string>
     <string name="view_applicant">View Applicant</string>
+    <string name="view_message">View Activity</string>
+    <string name="view_search_button">Search</string>
+    <string name="applicant_document">Document</string>
+    <string name="applicant_name">Name</string>
+    <string name="applicant_lastname">Lastname</string>
+    <string name="birthday">Birthday</string>
+    <string name="school">School</string>
+    <string name="career">Career</string>
+    <string name="holding_output">ABC</string>
 </resources>
